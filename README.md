@@ -10,6 +10,12 @@ This repository demonstrates how to:
 ### Requirements
 To use this demo repo, host machine requires [Ansible](http://docs.ansible.com/ansible/latest/intro_installation.html) and [Vagrant](https://www.vagrantup.com/docs/installation/)
 
+For Ubuntu
+
+```
+sudo apt-get install git ansible vagrant
+```
+
 ### Installation and Usage
 Simply clone this repository on to the machine:
 
