@@ -28,5 +28,11 @@ Access the webpage using the machine IP or localhost:8080
 ```
 http://127.0.0.1:8080
 ```
+### Troubleshooting
 
+ERROR: No usable default provider could be found for your system.
+
+CAUSE: Vagrant requires virtualmachine providers like VirtualBox, VMware etc.
+
+SOLUTION: Install virtualbox
 
