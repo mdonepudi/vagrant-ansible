@@ -1,0 +1,37 @@
+---
+ -  hosts: all
+    become: true
+    become_user: root
+    tasks:
+        - file:
+            path: /var/www/
+            state: directory
+        - copy:
+            src: index.html
+            dest: /var/www/index.html
+
+        - name: install python setup tools
+          yum: name=python-setuptools
+        
+        - name: install pip
+          easy_install: name=pip
+
+        - name: install docker-py
+          pip: name=docker-py
+
+        - name: install docker
+          yum: name=docker state=latest
+
+        - name: docker service start
+          service: name=docker state=started
+      
+        - name: nginx container
+          docker:
+            name: nginx-alpine
+            image: nginx:alpine
+            detach: true
+            state: started
+            volumes:
+            - "/var/www/:/usr/share/nginx/html"
+            ports:
+            - "8080:80"
