@@ -3,12 +3,12 @@ This repository demonstrates how to:
  - Bootstrap [CentOS/7](https://app.vagrantup.com/centos/boxes/7) Vagrant box
  - Provision the guest using Ansible playbook
     - Install Docker Service
-    - Launch NGINX container (nginx:alpine)[https://hub.docker.com/_/nginx/]
+    - Launch NGINX container [nginx:alpine](https://hub.docker.com/_/nginx/)
  - Serve static content from NGINX container on host name (port 8080) 
 
 
 ### Requirements
-In order to run, host machine requires [Ansible](http://docs.ansible.com/ansible/latest/intro_installation.html) and [Vagrant](https://www.vagrantup.com/docs/installation/)
+To use this demo repo, host machine requires [Ansible](http://docs.ansible.com/ansible/latest/intro_installation.html) and [Vagrant](https://www.vagrantup.com/docs/installation/)
 
 ### Installation and Usage
 Simply clone this repository on to the machine:
